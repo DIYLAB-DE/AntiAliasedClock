@@ -6,10 +6,12 @@ AntiAliasedClock
 
 Copyright (C) 2021 by DIYLAB <https://www.diylab.de>
 
+![](screenshots/thumb_watchface1.jpg) ![](screenshots/thumb_watchface2.jpg) ![](screenshots/thumb_watchface3.jpg)
+
 The idea itself comes from Bodmer's repository and his wonderful [TFT_eSPI](https://github.com/Bodmer/TFT_eSPI) library - thanks for the suggestion!
 The colleague presented an '[Anti-aliased_Clock_v3](https://github.com/Bodmer/TFT_eSPI/tree/2.4.0-Beta/examples/Anti-aliased/Anti-aliased_Clock_v3)' which I liked immediately.
 
-I ported this clock demo to the Teensy 4.x and use the [ILI9341_T4](https://github.com/vindar/ILI9341_T4)  and Arvind's TGX library from Arvind. It also allows me to draw with antialiasing, flicker-free through vSync and use RGB32 colors and alpha channels.
+I ported this clock demo to the Teensy 4.x and use the [ILI9341_T4](https://github.com/vindar/ILI9341_T4)  and Arvind's [TGX library](https://github.com/vindar/tgx). It also allows me to draw with antialiasing, flicker-free through vSync and use RGB32 colors and alpha channels.
 
 The clock uses the internal RTC of the Teensy and if you connect a [battery externally](https://www.pjrc.com/store/teensy40.html), the time is not lost either!
 
@@ -23,10 +25,6 @@ After setting the time, the clock runs freely and is automatically resynchronize
 ### Watch the video
 
 [![Watch the video](https://img.youtube.com/vi/NFdBhmQNh7A/0.jpg)](https://youtu.be/NFdBhmQNh7A)
-
-### Screen Views
-
-![](screenshots/thumb_watchface1.jpg) ![](screenshots/thumb_watchface2.jpg) ![](screenshots/thumb_watchface3.jpg)
 
 ### These components are required as a minimum
 
