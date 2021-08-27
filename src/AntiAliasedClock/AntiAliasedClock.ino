@@ -39,8 +39,8 @@ IntervalTimer interval25ms;
 using namespace tgx;
 
 // framebuffers
-DMAMEM uint16_t ib[240 * 320];  // used for internal buffering
-DMAMEM uint16_t fb[240 * 320];  // paint in this buffer
+DMAMEM uint16_t ib[240 * 320] = { 0 };  // used for internal buffering
+DMAMEM uint16_t fb[240 * 320] = { 0 };  // paint in this buffer
 
 // the screen driver object
 ILI9341_T4::ILI9341Driver tft(PIN_CS, PIN_DC, PIN_SCK, PIN_MOSI, PIN_MISO, PIN_RESET, PIN_TOUCH_CS, PIN_TOUCH_IRQ);
@@ -90,9 +90,6 @@ const char* monthNames[] = { "January", "February", "March", "April", "May", "Ju
 /// setup
 /// </summary>
 void setup() {
-    // clear buffer
-    memset(fb, 0, sizeof(fb));
-
     // time
     setSyncProvider(getTeensy3Time);
     setTime(now());
