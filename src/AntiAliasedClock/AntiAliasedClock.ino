@@ -90,6 +90,9 @@ const char* monthNames[] = { "January", "February", "March", "April", "May", "Ju
 /// setup
 /// </summary>
 void setup() {
+    // clear buffer
+    memset(fb, 0, sizeof(fb));
+
     // time
     setSyncProvider(getTeensy3Time);
     setTime(now());
